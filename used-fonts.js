@@ -1,4 +1,4 @@
-function getUsedFonts() {
+(function getUsedFonts() {
   const els = document.querySelectorAll("*");
   const fonts = {};
   [...els].forEach((el) => {
@@ -9,11 +9,9 @@ function getUsedFonts() {
   });
 
   console.log(fonts);
-}
+})()
 
-getUsedFonts();
-
-function getMatchinEls(family, weight) {
+(function getMatchinEls(family, weight) {
   const els = document.querySelectorAll("*");
   const matching = [];
   [...els].forEach((el) => {
@@ -25,6 +23,4 @@ function getMatchinEls(family, weight) {
   });
 
   console.log("matching", matching);
-}
-
-// getMatchinEls('Arial', '400')
+})('Arial', '400')
